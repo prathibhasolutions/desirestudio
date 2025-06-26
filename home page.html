@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: rgb(0, 0, 0);
+      height: auto;
+    }
+
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: #fff !important;
+    }
+
+    .navbar-toggler {
+      border: white;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      background: #ffffff;
+      color: #333;
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .feature-box {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .footer {
+      background: #212529;
+      color: #bbb;
+      padding: 40px 0;
+    }
+
+    .footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer .social-icons i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #bbb;
+      transition: color 0.3s;
+    }
+
+    .footer .social-icons i:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="web image.png"width="300px" alt=""></a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Join now</a></li>
+       <li class="nav-item"><a class="nav-link" href="#features">services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">shop now</a></li>
+           
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Welcome to desire studios</h1>
+    <p>Build beautiful future and elegance.</p>
+    <a href="#features" class="btn btn-light btn-lg">Explore services</a>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-title">our services</div>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <h4>Self Grooming</h4>
+          <p>Self-grooming is the art of enhancing your appearance, personality, and confidence. At our Makeup Academy.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <h4>Our Courses</h4>
+          <p>fashion desinging, Mehendi artistry, professional makeup, Sweing&parttern making, Self-grooming & styling.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <h4>Our Services</h4>
+          <p>Handmade Couture, Blouses, Gowns, Kuetis, Lehangas, Western Outfits, Aari Embroidery, Customized Outfits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Carousel wrapper -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100" alt="Slide 1" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100" alt="Slide 2" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="Slide 3" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- About -->
+<section class="section" id="about" style="background-color: #e9ecef;">
+  <div class="container">
+    <div class="section-title">About Us</div>
+    <p class="text-center">At our Makeup Academy, we are passionate about empowering individuals with the skills, creativity, and confidence needed to thrive in the ever-evolving beauty industry. Whether you're a complete beginner or an experienced artist looking to refine your skills, our academy offers a supportive, professional, and inspiring environment tailored to your growth.
+
+We provide a comprehensive curriculum that blends the latest trends with time-tested techniques. Our courses are designed and delivered by certified and experienced trainers who bring real-world industry knowledge to the classroom. You’ll learn everything from basic and advanced makeup application, bridal and party makeup, high-fashion/editorial makeup, airbrush techniques, to skin preparation and product knowledge.
+
+Our training is hands-on and practical, conducted in a professional studio setup that simulates real-world work environments. Students also get opportunities to build a strong portfolio, participate in live workshops, and receive grooming and client communication training — helping them become confident and job-ready.
+
+We don’t just teach makeup — we shape careers. With internship opportunities, freelance guidance, and placement support, we ensure that every student leaves not only with a certificate, but with the ability to succeed.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>About</h5>
+        <p>We are a creative web development company focused on modern design and smooth user experience. Join us to transform your digital presence.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <p>Uppal, hyderabad</p>
+        <p>Email: contact@gradientsite.com</p>
+        <p>Phone: +91 7337076066</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="text-light">
+    <p class="text-center">&copy; 2025 Desire Studio. All rights reserved.</p>
+    <p class="text-center" >Designed by <a href="https://www.prathibhasolutions.com" style="color:aquamarine;">Prathibha Solutions</a></p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
