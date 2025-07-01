@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Desire studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Boutique</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
   <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: #fff;
-    }
-  body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: #fff;
-    }
-   body {
+      body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #6a11cb, #2575fc);
       color: #fff;
@@ -67,7 +58,13 @@
       font-weight: 600;
       margin-bottom: 40px;
     }
-
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
     .feature-box {
       background: #f8f9fa;
       border-radius: 15px;
@@ -75,11 +72,7 @@
       box-shadow: 0 5px 15px rgba(93, 65, 65, 0.1);
       transition: transform 0.3s;
     }
-
-    .feature-box:hover {
-      transform: translateY(-10px);
-    }
-   .floating-whatsapp {
+    .floating-whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -96,6 +89,10 @@
       text-decoration: none;
       color: white;
     }
+    .feature-box:hover {
+      transform: translateY(-10px);
+    }
+
     .footer {
       background: #212529;
       color: #bbb;
@@ -140,8 +137,7 @@
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
+ <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#"><img src="web image.png"width="270px" alt=""></a>
@@ -157,55 +153,60 @@
        <li class="nav-item"><a class="nav-link" href="#service">services</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">shop now</a></li>
            
-          </ul>
-        </li>
+         
       </ul>
     </div>
   </div>
 </nav>
-<br><br><br>
-<section class="Termsconditions">
-  <div class="container">
-    <h1 class="mb-4 text-center">Terms & Conditions</h1>
+  <div class="container contact-container">
+    <h2 class="text-center mb-4">Contact Us</h2>
 
-    <p>Welcome to <strong>Elegance Boutique</strong>. By accessing our website or purchasing products from us, you agree to the following terms and conditions. Please read them carefully before using our services.</p>
+    <!-- Google Map -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3660607127576!2d78.39953131488745!3d17.50012568801054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb933e2f14db5b%3A0x5c3910dd95f7cf85!2sBoutique%20Store!5e0!3m2!1sen!2sin!4v1710000000000"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 
-    <h4>1. General Information</h4>
-    <p>All items listed on our website are subject to availability. We reserve the right to modify, discontinue, or change prices of our products at any time without notice.</p>
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" rows="4" class="form-control" placeholder="Your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Send Message</button>
+        </form>
+      </div>
 
-    <h4>2. Orders & Payments</h4>
-    <p>All orders must be paid in full at the time of checkout. We accept UPI, debit/credit cards, and cash on delivery (COD) in selected areas. Orders are only confirmed once payment is successful.</p>
-
-    <h4>3. Shipping & Delivery</h4>
-    <p>We aim to ship orders within 3–5 business days. Delivery times may vary based on location. Elegance Boutique is not responsible for delays caused by courier services.</p>
-
-    <h4>4. Returns & Exchanges</h4>
-    <p>We accept returns within 7 days of delivery if the product is damaged or not as described. Items must be unused and in original packaging. Return shipping charges are the customer’s responsibility unless the error is ours.</p>
-
-    <h4>5. Product Colors & Descriptions</h4>
-    <p>We try to display product colors and descriptions as accurately as possible. However, slight variations may occur due to lighting and screen settings.</p>
-
-    <h4>6. Intellectual Property</h4>
-    <p>All content including text, images, and logo is the property of Elegance Boutique and may not be used or reproduced without written permission.</p>
-
-    <h4>7. Privacy Policy</h4>
-    <p>Customer data is collected solely for order processing and communication. We do not share your personal information with third parties except for delivery purposes.</p>
-
-    <h4>8. Modifications</h4>
-    <p>Elegance Boutique reserves the right to revise these terms at any time. It is the user's responsibility to check for updates periodically.</p>
-
-    <h4>9. Contact Us</h4>
-    <p>If you have any questions about our terms, please contact us at <strong>support@eleganceboutique.com</strong> or call <strong>+91 98765 43210</strong>.</p>
-
-    <p class="mt-4"><strong>Effective Date:</strong> January 1, 2025</p>
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <h5>Address</h5>
+        <p>Elegance Boutique, Main Road, Hyderabad, Telangana - 500001</p>
+        <h5>Email</h5>
+        <p>info@eleganceboutique.com</p>
+        <h5>Phone</h5>
+        <p>+91 98765 43210</p>
+        <h5>Business Hours</h5>
+        <p>Mon - Sat: 10 AM - 8 PM<br>Sunday: Closed</p>
+      </div>
+    </div>
   </div>
-</section>
-<br><br><br>
-<!-- Floating WhatsApp Button -->
+
+  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <!-- Footer -->
+
+ <!-- Footer -->
 <footer class="footer" id="footer">
   <div class="container">
     <div class="row">
@@ -241,6 +242,8 @@
     <p class="text-center" >Designed by <a href="https://www.prathibhasolutions.com" style="color:aquamarine;">Prathibha Solutions</a></p>
   </div>
 </footer>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
