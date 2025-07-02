@@ -1,264 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Desire studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Swiper Carousel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
-      color: #fff;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
     }
 
-    .navbar {
-      background-color: rgb(0, 0, 0);
+    .carousel-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .swiper {
+      padding-bottom: 40px;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+      width: 100%;
       height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
     }
 
-    .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: black;
     }
 
-    .navbar-brand, .nav-link, .dropdown-item {
-      color: #fff !important;
-    }
- 
-    .navbar-toggler {
-      border: rgb(252, 252, 252);
-    }
-
-    .hero {
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .section {
-      background: #ffffff;
-      color: #333;
-      padding: 60px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 40px;
-    }
-
-    .feature-box {
-      background: #f8f9fa;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 5px 15px rgba(93, 65, 65, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .feature-box:hover {
-      transform: translateY(-10px);
-    }
-   
-    .footer {
-      background: #212529;
-      color: #bbb;
-      padding: 40px 0;
-    }
-
-    .footer a {
-      color: #bbb;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-
-    .footer .social-icons i {
-      font-size: 20px;
-      margin-right: 10px;
-      color: #bbb;
-      transition: color 0.3s;
-    }
-
-    .footer .social-icons i:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .section-title {
-        font-size: 1.8rem;
-      }
+    .swiper-pagination-bullet {
+      background: black;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="web image.png"width="260px" alt=""></a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="Contactus.html">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-       <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="shopnow.html">Shop now</a></li>
-         
-      </ul>
+
+  <div class="carousel-container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="pg1.webp" alt="1" /></div>
+        <div class="swiper-slide"><img src="pg2.jpg" alt="2" /></div>
+        <div class="swiper-slide"><img src="pg3.jpeg" alt="3" /></div>
+        <div class="swiper-slide"><img src="pg4.jpeg" alt="4" /></div>
+        <div class="swiper-slide"><img src="xyz.jpg" alt="5" /></div>
+      </div>
+
+      <!-- Arrows -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- Dots -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
-</nav>
-<br><br><br>
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <div class="section-title">About Us</div>
-      <p class="text-center mx-auto" style="max-width: 800px;">
-        Welcome to <strong>Desire studio</strong>, a hub for innovative learning and skill development. Our goal is to provide world-class education and empower the next generation of tech leaders and thinkers.
-      </p>
-    </div>
-  </section>
 
-  <!-- Founder & Director -->
-  <section class="about-section">
-    <div class="container">
-      <div class="section-title">Founder</div>
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center mb-4">
-          <img src="123.avif" width="150px" alt="Founder" class="profile-img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-custom">
-            <h4>Soujanya</h4>
-            <p>Founder of Desire studio</p>
-            <p>With over 20 years of experience in education and technology, Mr. Ramesh has guided thousands of students toward success in competitive exams and careers in IT. His leadership ensures quality and innovation at every level of the institute.</p>
-          </div>
-        </div>
-      </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      spaceBetween: 30,
+      slidesOffsetBefore: 20,
+      slidesOffsetAfter: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          slidesOffsetBefore: 10,
+          slidesOffsetAfter: 10
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          slidesOffsetBefore: 30,
+          slidesOffsetAfter: 30
+        }
+      }
+    });
+  </script>
 
-            <div class="section-title">Director</div>
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center mb-4">
-          <img src="1234.jpeg " width="150px" alt="Founder" class="profile-img">
-        </div>
-        <div class="col-md-8">
-          <div class="card-custom">
-            <h4>Mr. Sirish</h4>
-            <p>Director of Desire studio</p>
-            <p>With over 20 years of experience in education and technology, Mr. Ramesh has guided thousands of students toward success in competitive exams and careers in IT. His leadership ensures quality and innovation at every level of the institute.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission -->
-  <section class="mission-section">
-    <div class="container">
-      <div class="section-title">Our Mission</div>
-      <div class="card-custom text-center mx-auto" style="max-width: 900px;">
-        <p>To deliver affordable, high-quality education and training that prepares individuals for successful careers in the ever-changing technological world.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vision -->
-  <section class="vision-section">
-    <div class="container">
-      <div class="section-title">Our Vision</div>
-      <div class="card-custom text-center mx-auto" style="max-width: 900px;">
-        <p>To become a leading institute in skill-based education, fostering innovation and creativity while shaping tomorrow’s leaders in tech, science, and engineering.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements -->
-  <section class="achievements-section">
-    <div class="container">
-      <div class="section-title">Achievements</div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card-custom text-center">
-            <h5>10,000+ Students Trained</h5>
-            <p>Successfully trained students in coding, engineering, and competitive exam courses.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-custom text-center">
-            <h5>95% Placement Rate</h5>
-            <p>Our students are placed in top companies like Infosys, TCS, and Wipro.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-custom text-center">
-            <h5>Top-Rated Faculty</h5>
-            <p>Team of experienced professionals and industry-certified mentors.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<br><br><br>
-  
-  <!-- Footer -->
-<footer class="footer" id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <h5>About</h5>
-        <p>We are a creative web development company focused on modern design and smooth user experience. Join us to transform your digital presence.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="Contactus.html">Contact Us</a></li>
-          <li><a href="TermsConditions.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h5>Contact Us</h5>
-        <p>Uppal, hyderabad</p>
-        <p>Email: contact@gradientsite.com</p>
-        <p>Phone: +91 7337076066</p>
-        <div class="social-icons mt-3">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-    <hr class="text-light">
-    <p class="text-center">&copy; 2025 Desire Studio. All rights reserved.</p>
-    <p class="text-center" >Designed by <a href="https://www.prathibhasolutions.com" style="color:aquamarine;">Prathibha Solutions</a></p>
-  </div>
-</footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
