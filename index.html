@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="web image.png"width="260px" alt=""></a>
+    <a class="navbar-brand" href="#"><img src="web image.png" width="260px" alt=""></a>
     <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +33,7 @@
     </div>
   </div>
 </nav>
-<br><br><br>
+
 <!-- Hero -->
 <section class="hero">
   <img src="hero-img.jpg" alt="Desire Studio" class="hero-image">
@@ -45,32 +46,63 @@
 </section>
 
 
-<!-- Features -->
-<section class="section" id="features">
+<!-- Features/Services -->
+<section class="services-section" id="features">
   <div class="container">
-    <div class="section-title">OUR SERVICES</div>
-    <div class="row text-center g-4">
-      <div class="col-md-4">
-        <div class="feature-box">
-          <h4>Self Grooming</h4>
-          <p>Self-grooming is the art of enhancing your appearance, personality, and confidence. At our Makeup Academy.</p>
-        </div>
+    <div class="section-title animate__animated animate__fadeInDown">OUR SERVICES</div>
+    <div class="row service-buttons-row g-4">
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="couture.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="100">
+          <div class="service-card">
+            <i class="fas fa-cut service-icon"></i>
+            <h5>Couture</h5>
+          </div>
+        </a>
       </div>
-      <div class="col-md-4">
-        <div class="feature-box">
-          <h4>Our Courses</h4>
-          <p>fashion desinging, Mehendi artistry, professional makeup, Sweing&parttern making, Self-grooming & styling.</p>
-        </div>
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="academy.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="200">
+          <div class="service-card">
+            <i class="fas fa-graduation-cap service-icon"></i>
+            <h5>Academy</h5>
+          </div>
+        </a>
       </div>
-      <div class="col-md-4">
-        <div class="feature-box">
-          <h4>Our Services</h4>
-          <p>Handmade Couture, Blouses, Gowns, Kuetis, Lehangas, Western Outfits, Aari Embroidery, Customized Outfits.</p>
-        </div>
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="mehendi.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="300">
+          <div class="service-card">
+            <i class="fas fa-hand-sparkles service-icon"></i>
+            <h5>Mehendi</h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="boutique.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="400">
+          <div class="service-card">
+            <i class="fas fa-store service-icon"></i>
+            <h5>Boutique</h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="makeup.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="500">
+          <div class="service-card">
+            <i class="fas fa-palette service-icon"></i>
+            <h5>Makeup</h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-4">
+        <a href="photography.html" class="service-button animate__animated animate__fadeInUp" data-animate-delay="600">
+          <div class="service-card">
+            <i class="fas fa-camera service-icon"></i>
+            <h5>Photography</h5>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
+
  
 
  
@@ -111,9 +143,65 @@
   </div>
 </footer>
 <!-- WhatsApp -->
- <a href="https://wa.me/7337076066?text=Hello" target="_blank" style="position: fixed; right: 25px; bottom: 50px;">
+<a href="https://wa.me/7337076066?text=Hello" target="_blank" style="position: fixed; right: 25px; bottom: 50px; z-index: 999999;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" width="70">
 </a>
+
+
+<script>
+// Right-side mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const body = document.body;
+  
+  // Handle menu toggle
+  navbarToggler.addEventListener('click', function() {
+    setTimeout(() => {
+      if (navbarCollapse.classList.contains('show')) {
+        body.classList.add('navbar-open');
+      } else {
+        body.classList.remove('navbar-open');
+      }
+    }, 10);
+  });
+  
+  // Close menu when clicking the X button
+  navbarCollapse.addEventListener('click', function(e) {
+    const rect = this.getBoundingClientRect();
+    if (e.clientX > rect.right - 60 && e.clientY < 80) {
+      navbarToggler.click();
+    }
+  });
+  
+  // Close menu when clicking on backdrop
+  navbarCollapse.addEventListener('click', function(e) {
+    if (e.target === this) {
+      navbarToggler.click();
+    }
+  });
+  
+  // Close menu when clicking on a nav link (mobile)
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 992) {
+        setTimeout(() => {
+          navbarToggler.click();
+        }, 200);
+      }
+    });
+  });
+  
+  // Close menu on window resize if open
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+      navbarToggler.click();
+    }
+  });
+});
+</script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
