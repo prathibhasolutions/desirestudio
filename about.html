@@ -36,8 +36,8 @@
   <img src="about-hero-img.jpg" alt="About Desire Studio" class="hero-image">
   <div class="hero-content">
     <div class="hero-quote">"Crafting Dreams into Reality"</div>
-    <h1>About Desire Studios</h1>
-    <p>We are a creative studio focused on modern design, fashion, and transforming your vision into beautiful reality.</p>
+    <h1 id="hide-section">About Desire Studios</h1>
+    <p id="hide-section1">We are a creative studio focused on modern design, fashion, and transforming your vision into beautiful reality.</p>
    
   </div>
 </section>
@@ -219,6 +219,17 @@ document.addEventListener('DOMContentLoaded', function() {
       navbarToggler.click();
     }
   });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Option 1: Check screen width (responsive-friendly)
+  if (window.innerWidth <= 768) { // 768px is common mobile breakpoint
+    document.getElementById("hide-section").style.display = "none";
+  }
+if (window.innerWidth <= 768) { // 768px is common mobile breakpoint
+    document.getElementById("hide-section1").style.display = "none";
+  }
 });
 </script>
 
