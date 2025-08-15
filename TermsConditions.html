@@ -108,51 +108,112 @@
 <footer class="footer" id="footer">
   <div class="container">
     <div class="row">
-
       <div class="col-md-4 mb-4">
         <h5>About</h5>
-        <p>We are a creative studio focused on modern design, fashion, beauty, and transforming your vision into reality.</p>
+        <p>We are a creative web development company focused on modern design and smooth user experience. Join us to transform your digital presence.</p>
       </div>
-
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Services</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="Services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="Contactus.html">Contact Us</a></li>
+          <li><a href="TermsConditions.html">Terms & Conditions</a></li>
         </ul>
       </div>
-
       <div class="col-md-4">
         <h5>Contact Us</h5>
         <p>Uppal, Hyderabad</p>
-        <p>Email: contact@desirestudio.com</p>
+        <p>Email: desirestudio.academy@gmail.com</p>
         <p>Phone: +91 7337076066</p>
         <div class="social-icons mt-3">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1B1i77vYao/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/desire_couture_studio?igsh=MXBkNHZnajJkeXRsZQ=="><i class="fab fa-instagram"></i></a>
+          
+          <a href="https://www.youtube.com/@soujanyamegaji?si=vUOOmly5fN8BkHSB"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-
     </div>
-    <hr class="text-light" />
+    <hr class="text-light">
     <p class="text-center">&copy; 2025 Desire Studio. All rights reserved.</p>
-    <p class="text-center">Designed by 
-      <a href="https://www.prathibhasolutions.com" style="color:aquamarine;">Prathibha Solutions</a>
-    </p>
+    <p class="text-center" >Designed by <a href="https://www.prathibhasolutions.com" style="color:aquamarine;">Prathibha Solutions</a></p>
   </div>
 </footer>
-
 <!-- WhatsApp -->
-<a href="https://wa.me/7337076066?text=Hello" target="_blank" class="whatsapp-btn">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
-    alt="WhatsApp" width="70" />
+<a href="https://wa.me/7337076066?text=Hello" target="_blank" style="position: fixed; right: 25px; bottom: 50px; z-index: 999999;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" width="70">
 </a>
 
-<!-- Scripts -->
+
+<script>
+// Right-side mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const body = document.body;
+  
+  // Handle menu toggle
+  navbarToggler.addEventListener('click', function() {
+    setTimeout(() => {
+      if (navbarCollapse.classList.contains('show')) {
+        body.classList.add('navbar-open');
+      } else {
+        body.classList.remove('navbar-open');
+      }
+    }, 10);
+  });
+  
+  // Close menu when clicking the X button
+  navbarCollapse.addEventListener('click', function(e) {
+    const rect = this.getBoundingClientRect();
+    if (e.clientX > rect.right - 60 && e.clientY < 80) {
+      navbarToggler.click();
+    }
+  });
+  
+  // Close menu when clicking on backdrop
+  navbarCollapse.addEventListener('click', function(e) {
+    if (e.target === this) {
+      navbarToggler.click();
+    }
+  });
+  
+  // Close menu when clicking on a nav link (mobile)
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 992) {
+        setTimeout(() => {
+          navbarToggler.click();
+        }, 200);
+      }
+    });
+  });
+  
+  // Close menu on window resize if open
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+      navbarToggler.click();
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Option 1: Check screen width (responsive-friendly)
+  if (window.innerWidth <= 768) { // 768px is common mobile breakpoint
+    document.getElementById("hide-section").style.display = "none";
+  }
+if (window.innerWidth <= 768) { // 768px is common mobile breakpoint
+    document.getElementById("hide-section1").style.display = "none";
+  }
+});
+</script>
+
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
