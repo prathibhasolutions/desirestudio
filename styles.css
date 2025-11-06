@@ -1293,7 +1293,7 @@ section {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column !important;
-    padding: 20px 15px !important;
+    padding: 20px 15px 0px 15px !important;
     gap: 0px !important;
     background: #404c5a;
     width: 100vw !important;
@@ -1308,68 +1308,75 @@ section {
     max-width: 100% !important;
     width: 100% !important;
     height: auto !important;
-    order: 1;
+    order: 2;
     object-fit: contain;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0px !important;
+    padding: 0px !important;
+    transform: translateY(-50px) !important;
   }
   
   .hero-content {
     flex: none;
     width: 100%;
-    padding: 0;
+    padding: 0px !important;
     text-align: center;
     align-items: center;
-    order: 2;
+    order: 1;
     box-sizing: border-box;
+    margin: 0px !important;
+    margin-bottom: 50px !important;
   }
   
   .hero-quote {
     font-size: 1.8rem;
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px !important;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1 !important;
   }
 
   .hero h1 {
     font-size: 2.2rem;
-    margin-bottom: 15px;
-    margin-top: 0;
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px !important;
     text-align: center;
     color: white;
+    line-height: 1.1 !important;
   }
 
   .hero p {
     font-size: 1rem;
-    margin-bottom: 20px;
-    margin-top: 0;
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px !important;
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
+    line-height: 1.2 !important;
   }
 
   .hero a.btn {
     align-self: center;
-    margin: 0;
+    margin: 20px 0 0 0 !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 15px 10px;
-    gap: 15px;
+    padding: 15px 10px 8px 10px;
+    gap: 1px;
     width: 100vw;
     margin: 0;
   }
   
   .hero-content {
-    padding: 15px 0;
+    padding: 8px 0 3px 0;
   }
   
   .hero-quote {
     font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -1377,19 +1384,37 @@ section {
   
   .hero h1 {
     font-size: 1.8rem;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
     text-align: center;
     color: white;
   }
   
   .hero p {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
   }
 
   .hero a.btn {
     align-self: center;
+  }
+  
+  /* About details section mobile gap reduction */
+  .services-section {
+    padding: 20px 0 !important;
+  }
+  
+  .services-section .section-title {
+    margin-bottom: 15px !important;
+    font-size: 1.8rem !important;
+  }
+  
+  .row.g-5 {
+    gap: 10px !important;
+  }
+  
+  .col-lg-6, .col-lg-4 {
+    margin-bottom: 10px !important;
   }
 }
 
